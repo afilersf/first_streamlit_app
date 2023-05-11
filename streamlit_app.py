@@ -5,7 +5,7 @@ streamlit.title ('My Parents New Healthy Diner')
 
 streamlit.header ('Breakfast Favorites')
 streamlit.text ('🥣 Omega 3 & Blueberry Oatmeal') 
-streamlit. text ('🥗 Kale, Spinach & Rocket Smoothie') 
+streamlit.text ('🥗 Kale, Spinach & Rocket Smoothie') 
 streamlit.text ('🐔 Hard-Boiled Free-Range Egg')
 streamlit.text ('🥑🍞 Avocado Toast')
 
@@ -41,3 +41,8 @@ my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The Fruit Load List Contains:")
 streamlit.dataframe(my_data_rows)
+
+# Allow the end user to add a fruit to the list
+
+add_my_fruit = streamlit.text_input('What fruit would you like to add', 'jackfruit')
+streamlit.write('Thanks for adding', add_my_fruit)
